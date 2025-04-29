@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For Her - Click Kar</title>
+        <link rel="icon" type="image/x-icon" href="gif/LOGO.jpg">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .view{
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .gif{
+            height: 150px;
+            width: 150px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        img{
+            height: 125px;
+            width: 125px;
+            border-radius: 50%;
+            border: 3px solid  grey;
+        }
+        .text{
+            height: auto;
+            width: auto;
+        }
+        h1{
+            font-size: 55px;
+        }
+        .arrow{
+            height: 200px;
+            width: 400px;
+            position: relative;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h2{
+            font-size: 35px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            color: rgb(48, 44, 44);
+            border: 1px grey;
+        }
+        .arrow {
+            font-size: 3rem;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 2s ease;
+            position: relative;
+        }
+
+        .arrow.show {
+            transform: translateY(-10px); /* move to center */
+            opacity: 1;
+        }
+        a{
+            text-decoration: none;
+        }
+        h2:hover {
+            background-color: rgb(197, 193, 193);
+        }
+        .view {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100px); /* start from below */
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        .view.show {
+            opacity: 1;
+            transform: translateY(0); /* move to original position */
+        }
+        /*Responsive start for text*/
+        @media only screen and (max-width: 640px) {
+            .text{
+                position: relative;
+                top: 50px;
+            }
+            h1{
+                font-size: 25px;
+            }
+        }
+        /*Responsive End for text*/
+    </style>
+    <body>
+        <div class="container">
+            <div class="view" id="content">
+                <div class="gif">
+                    <img src="gif/april_fool.jpeg">
+                </div>
+                <div class="text">
+                    <h1>Tap Kar Thik Se <br>Shibal</h1>
+                </div>
+            </div>
+            <div  id="arrow" class="arrow">
+                <a href="Flowers.html"><h2>Click Kar😝</h2></a>
+            </div>
+        </div>
+
+        <script>
+            const arrow = document.getElementById('arrow');
+            // Start animation after page loads
+            setTimeout(() => {
+              arrow.classList.add('show');
+            }, 3000); // small delay for dramatic effect
+
+            //img/text//
+            const content = document.getElementById('content');
+
+            // Trigger animation after short delay
+            setTimeout(() => {
+            content.classList.add('show');
+            }, 500);
+          </script>
+    </body>
+</html>

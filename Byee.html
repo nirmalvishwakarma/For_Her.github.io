@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Byee</title>
+        <!--Fonts-->
+        <link href="https://api.fontshare.com/v2/css?f[]=khand@400&f[]=array@400&display=swap" rel="stylesheet">
+        <!--Logo-->
+        <link rel="icon" type="image/x-icon" href="gif/LOGO.jpg">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background: url(gif/night_sky.gif);
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        h1{
+            font-size: 33px;
+            font-family: 'Khand', sans-serif;
+            font-family: 'Array', sans-serif;
+        }
+        .light-text {
+            font-size: 33;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards, lightBlink 2s infinite alternate 2s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes lightBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*Responsive start for text*/
+        @media only screen and (max-width: 700px) {
+            .container{
+            height: 100vh;
+            width: 100%;
+            background: url(gif/night_sky_2.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        }
+        /*Responsive End for text*/        
+    </style>
+    <body>
+        <div class="container">
+            <div class="text">
+                <h1 class="light-text">Good🥱😪Night!!</h1>
+            </div>
+        </div>
+    </body>
+</html>
